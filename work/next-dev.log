@@ -1,0 +1,51 @@
+
+> mostafa-ahmed-portfolio@1.0.0 dev
+> next dev --hostname 127.0.0.1 --port 3000
+
+   ▲ Next.js 15.5.19
+   - Local:        http://127.0.0.1:3000
+   - Network:      http://127.0.0.1:3000
+
+ ✓ Starting...
+ ✓ Ready in 3.7s
+ ○ Compiling / ...
+ ✓ Compiled / in 13.8s (1510 modules)
+ ✓ Compiled in 3.5s (683 modules)
+ GET / 200 in 17925ms
+ GET / 200 in 704ms
+ GET / 200 in 65ms
+ GET / 200 in 384ms
+ GET / 200 in 371ms
+ ✓ Compiled in 553ms (683 modules)
+ ✓ Compiled in 458ms (683 modules)
+ GET / 200 in 421ms
+ GET / 200 in 425ms
+ GET / 200 in 436ms
+ GET / 200 in 453ms
+ ✓ Compiled in 706ms (683 modules)
+ ✓ Compiled in 633ms (683 modules)
+ GET / 200 in 856ms
+ GET / 200 in 876ms
+ ✓ Compiled in 484ms (683 modules)
+ GET / 200 in 537ms
+ GET / 200 in 560ms
+ ✓ Compiled in 303ms (683 modules)
+ GET / 200 in 422ms
+ GET / 200 in 424ms
+ GET / 200 in 157ms
+ GET / 200 in 72ms
+ ✓ Compiled in 471ms (683 modules)
+ GET / 200 in 244ms
+ GET / 200 in 249ms
+ GET / 200 in 466ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 1881ms (1501 modules)
+ GET /resume.pdf 404 in 2096ms
+ GET /resume.pdf 404 in 221ms
+ GET /resume.pdf 404 in 79ms
+ GET /resume.pdf 404 in 71ms
+ GET /resume.pdf 404 in 130ms
+ GET /resume.pdf 404 in 83ms
+ GET / 200 in 687ms
+ GET / 200 in 55ms
+ GET / 200 in 352ms

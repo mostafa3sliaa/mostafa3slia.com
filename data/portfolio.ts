@@ -1,0 +1,189 @@
+import {
+  FiBarChart2,
+  FiBriefcase,
+  FiCode,
+  FiGithub,
+  FiGlobe,
+  FiLinkedin,
+  FiMail,
+  FiMapPin,
+  FiMessageCircle,
+  FiNavigation,
+  FiSearch,
+  FiTarget,
+  FiTrendingUp,
+} from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
+import type {
+  ContactMethod,
+  NavItem,
+  Project,
+  Service,
+  Skill,
+  SocialLink,
+  Stat,
+  Testimonial,
+} from "@/types/portfolio";
+
+export const navItems = [
+  { key: "home", href: "#home" },
+  { key: "about", href: "#about" },
+  { key: "skills", href: "#skills" },
+  { key: "projects", href: "#projects" },
+  { key: "services", href: "#services" },
+  { key: "contact", href: "#contact" },
+];
+
+export const socialLinks: SocialLink[] = [
+  { label: "GitHub", href: "https://github.com/", icon: FiGithub },
+  { label: "LinkedIn", href: "https://linkedin.com/", icon: FiLinkedin },
+];
+
+export const services: Service[] = [
+  {
+    title: "تطوير المواقع والتطبيقات",
+    description:
+      "بناء مواقع برمجية احترافية وسريعة، وتطوير المتاجر الإلكترونية مع ربط بوابات الدفع الإلكتروني وتأمين المواقع.",
+    icon: FiCode,
+    accent: "blue",
+  },
+  {
+    title: "التسويق الرقمي وإدارة الحملات",
+    description:
+      "إدارة الحملات الإعلانية والتسويق الرقمي لمساعدة الشركات على زيادة المبيعات والوصول للجمهور المستهدف.",
+    icon: FiTarget,
+    accent: "purple",
+  },
+  {
+    title: "تحسين محركات البحث (SEO)",
+    description:
+      "تصميم وتطوير مواقع متوافقة مع معايير SEO لمساعدة الشركات على تصدر نتائج البحث وزيادة الزيارات المجانية.",
+    icon: FiSearch,
+    accent: "green",
+  },
+  {
+    title: "واجهات وتجربة المستخدم",
+    description:
+      "تحسين تجربة المستخدم (UX) وتصميم واجهات المستخدم (UI) لضمان تفاعل سلس ومميز مع زوار موقعك.",
+    icon: FiTrendingUp,
+    accent: "blue",
+  },
+];
+
+export const skills: Skill[] = [
+  { name: "React.js & Next.js", level: 95, accent: "blue" },
+  { name: "HTML, CSS, JS", level: 95, accent: "purple" },
+  { name: "Node.js", level: 85, accent: "green" },
+  { name: "PHP & Laravel", level: 85, accent: "purple" },
+  { name: "WordPress", level: 90, accent: "blue" },
+  { name: "SEO", level: 90, accent: "green" },
+  { name: "UI/UX Design", level: 80, accent: "purple" },
+  { name: "Google Ads", level: 85, accent: "blue" },
+];
+
+export const projects: Project[] = [
+  {
+    title: "Dr. Ashraf Retina Clinic",
+    description:
+      "A premium ophthalmology and retina clinic website designed and developed to provide a seamless patient experience. Includes service pages, SEO optimization, responsive design, WhatsApp appointment booking, multilingual support, medical blog system, and modern UI/UX built with Next.js.",
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "SEO"],
+    liveUrl: "https://drashrf.netlify.app/ar",
+    sourceUrl: "",
+    accent: "blue",
+    visual: "medical",
+    image: "/dr-ashraf.png",
+  },
+  {
+    title: "لوحة تحكم SaaS",
+    description:
+      "لوحة تحكم متقدمة لإدارة المبيعات والبيانات مع واجهات مستخدم حديثة وتكامل مع خدمات الدفع.",
+    techStack: ["React", "Charts", "Node.js", "APIs"],
+    liveUrl: "https://example.com",
+    sourceUrl: "https://github.com/",
+    accent: "green",
+    visual: "saas",
+  },
+  {
+    title: "متجر إلكتروني حديث",
+    description:
+      "متجر متكامل مع بوابات الدفع الإلكتروني، إدارة المنتجات، وتأمين عالٍ للبيانات.",
+    techStack: ["Next.js", "MongoDB", "Framer", "Stripe"],
+    liveUrl: "https://example.com",
+    sourceUrl: "https://github.com/",
+    accent: "purple",
+    visual: "growth",
+  },
+  {
+    title: "منصة صحفية إخبارية",
+    description:
+      "موقع إخباري سريع الأداء متوافق تماماً مع محركات البحث SEO، ولوحة تحكم لإدارة المحتوى.",
+    techStack: ["React", "Laravel", "Tailwind", "SEO"],
+    liveUrl: "https://example.com",
+    sourceUrl: "https://github.com/",
+    accent: "blue",
+    visual: "realEstate",
+  },
+];
+
+export const stats: Stat[] = [
+  { value: 50, suffix: "+", label: "مشاريع مكتملة", animated: true },
+  { value: 100, suffix: "+", label: "عملاء سعداء", animated: true },
+  { value: 5, suffix: "+", label: "سنوات خبرة", animated: true },
+  { value: "تقييم عالي", label: "مستقل" },
+];
+
+export const testimonials: Testimonial[] = [
+  {
+    quote:
+      "قام مصطفى ببناء موقعنا باحترافية عالية وربطه بحملات إعلانية ضاعفت من مبيعاتنا بشكل ملحوظ.",
+    name: "أحمد محمود",
+    role: "مؤسس",
+    company: "شركة برمجيات رائدة",
+  },
+  {
+    quote:
+      "خبرة ممتازة في تحسين محركات البحث، لاحظنا زيادة كبيرة في الزيارات العضوية بعد العمل معه.",
+    name: "سارة كمال",
+    role: "مديرة تسويق",
+    company: "متجر إلكتروني",
+  },
+  {
+    quote:
+      "لوحة التحكم التي صممها سهلت علينا إدارة البيانات والعملاء بشكل لا يصدق، أنصح بشدة بالعمل معه.",
+    name: "عمر خالد",
+    role: "مدير عمليات",
+    company: "مؤسسة طبية",
+  },
+];
+
+export const contactMethods: ContactMethod[] = [
+  { label: "البريد الإلكتروني", value: "hello@mostafa3slia.com", href: "mailto:hello@mostafa3slia.com", icon: FiMail },
+  { label: "واتساب", value: "+20 106 103 6045", href: "https://wa.me/201061036045", icon: FaWhatsapp },
+  { label: "لينكد إن", value: "linkedin.com/in/mostafa-ahmed", href: "https://linkedin.com/", icon: FiLinkedin },
+  { label: "جيت هب", value: "github.com/mostafa-ahmed", href: "https://github.com/", icon: FiGithub },
+];
+
+export const heroChips = ["MERN Stack", "Next.js", "WordPress", "SEO", "APIs", "UI/UX"];
+
+export const aboutHighlights = [
+  {
+    title: "لوحات تحكم SaaS متقدمة",
+    description: "بناء وتطوير واجهات المستخدم ولوحات التحكم المتقدمة للشركات الناشئة والمؤسسات.",
+    icon: FiGlobe,
+  },
+  {
+    title: "المتاجر وبوابات الدفع",
+    description: "تطوير المتاجر الإلكترونية مع ربط بوابات الدفع الإلكتروني وتأمين المواقع.",
+    icon: FiCode,
+  },
+  {
+    title: "تأمين المواقع والبيانات",
+    description: "تأمين المواقع والتطبيقات وحماية البيانات الحساسة من الاختراقات.",
+    icon: FiBarChart2,
+  },
+  {
+    title: "المنصات الصحفية والطبية",
+    description: "خبرة واسعة في بناء المنصات الإخبارية، الطبية، وصفحات الهبوط عالية التحويل.",
+    icon: FiNavigation,
+  },
+];

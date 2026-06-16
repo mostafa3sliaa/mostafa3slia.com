@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "hero": {
+    "available": "Available for new projects",
+    "title1": "Mostafa Ahmed",
+    "title2": "Web Developer & Digital Marketer",
+    "description": "I build integrated digital platforms combining the power of programming with marketing intelligence to achieve your business goals.",
+    "cta": "Get in touch",
+    "bookCall": "Book a Consultation"
+  },
+  "about": {
+    "title": "About Me",
+    "description1": "I'm Mostafa, a full-stack web developer and UI designer with extensive experience building medical platforms, news portals, e-commerce stores, and securing websites. I excel at merging modern development with effective digital marketing strategies.",
+    "description2": "My passion is transforming complex ideas into simple, elegant, and scalable technical solutions. Whether you need a complex SaaS dashboard or an integrated e-commerce store built for rapid growth."
+  },
+  "services": {
+    "title": "My Services",
+    "subtitle": "Integrated Solutions"
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "subtitle": "Technologies & Tools"
+  },
+  "projects": {
+    "title": "Recent Work",
+    "subtitle": "Selected Projects",
+    "live": "Live Demo",
+    "code": "Source Code"
+  },
+  "stats": {
+    "projects": "Completed Projects",
+    "clients": "Happy Clients",
+    "experience": "Years Experience",
+    "rating": "High Rating"
+  },
+  "testimonials": {
+    "title": "Client Reviews",
+    "subtitle": "What they say"
+  },
+  "contact": {
+    "title": "Let's work together",
+    "subtitle": "Contact Me",
+    "description": "Whether you have a new project or need technical consulting, I'm always available to discuss details and provide the best solutions.",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "message": "Your Message",
+      "submit": "Send Message",
+      "sending": "Sending..."
+    }
+  },
+  "footer": {
+    "copyright": "All rights reserved",
+    "developer": "Mostafa Ahmed"
+  }
+}
