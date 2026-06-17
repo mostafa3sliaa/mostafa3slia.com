@@ -47,5 +47,5 @@ export const staggerContainer: Variants = {
 export const hoverLift = {
   y: isMobile ? 0 : -8,
   scale: isMobile ? 1 : 1.015,
-  transition: { duration: 0.4, ease: [0.175, 0.885, 0.32, 1.275] },
+  transition: { duration: 0.4, ease: [0.175, 0.885, 0.32, 1.275] as const },
 };
