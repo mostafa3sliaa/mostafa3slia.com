@@ -36,7 +36,6 @@ export const navItems = [
 
 export const socialLinks: SocialLink[] = [
   { label: "GitHub", href: "https://github.com/", icon: FiGithub },
-  { label: "LinkedIn", href: "https://linkedin.com/", icon: FiLinkedin },
 ];
 
 export const services: Service[] = [
@@ -159,7 +158,6 @@ export const testimonials: Testimonial[] = [
 export const contactMethods: ContactMethod[] = [
   { label: "البريد الإلكتروني", value: "hello@mostafa3slia.com", href: "mailto:hello@mostafa3slia.com", icon: FiMail },
   { label: "واتساب", value: "+20 106 103 6045", href: "https://wa.me/201061036045", icon: FaWhatsapp },
-  { label: "لينكد إن", value: "linkedin.com/in/mostafa-ahmed", href: "https://linkedin.com/", icon: FiLinkedin },
   { label: "جيت هب", value: "github.com/mostafa-ahmed", href: "https://github.com/", icon: FiGithub },
 ];
 

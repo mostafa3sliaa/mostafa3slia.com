@@ -79,7 +79,7 @@ export function HeroSection() {
 
               <motion.h1
                 variants={fadeUp}
-                className="metallic-text max-w-4xl text-5xl font-semibold tracking-normal sm:text-6xl lg:text-7xl xl:text-8xl"
+                className="metallic-text max-w-4xl text-5xl font-semibold tracking-normal leading-relaxed pb-3 sm:text-6xl lg:text-7xl xl:text-8xl"
               >
                 {t("hero.title1")}
               </motion.h1>

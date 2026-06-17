@@ -44,7 +44,7 @@ export function Header() {
             <span className="absolute inset-0 bg-gradient-to-br from-white/18 via-transparent to-blue-400/18 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
             <span className="relative">MA</span>
           </span>
-          <span className="hidden text-xl font-black tracking-tight text-white sm:block">
+          <span className="text-xl font-black tracking-tight text-white">
             مصطفى أحمد
           </span>
         </Link>
