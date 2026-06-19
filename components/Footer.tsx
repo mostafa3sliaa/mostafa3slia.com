@@ -1,12 +1,17 @@
+"use client";
+
 import Link from "next/link";
 import { socialLinks } from "@/data/portfolio";
 
+import { useLanguage } from "@/contexts/LanguageContext";
+
 export function Footer() {
+  const { t, dict } = useLanguage();
   return (
     <footer className="border-t border-white/8 py-8">
       <div className="section-shell flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
         <p className="text-sm text-gray-500">
-          جميع الحقوق محفوظة {new Date().getFullYear()} مصطفى أحمد.
+          {t("footer.copyright")} {new Date().getFullYear()} {dict.data.headerName}.
         </p>
         <div className="flex items-center gap-2">
           {socialLinks.map(({ href, label, icon: Icon }) => (

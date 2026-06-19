@@ -1,129 +1,95 @@
 "use client";
 
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { FiArrowRight, FiCalendar } from "react-icons/fi";
+import { FiCalendar, FiArrowDownRight } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
-import { Button } from "@/components/ui/Button";
 import { heroChips } from "@/data/portfolio";
-import { fadeUp, fadeIn, staggerContainer } from "@/lib/motion";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export function HeroSection() {
-  const { scrollY } = useScroll();
   const { t } = useLanguage();
-  const portraitY = useTransform(scrollY, [0, 700], [0, -42]);
-  const glowY = useTransform(scrollY, [0, 700], [0, 68]);
 
   return (
-    <section id="home" className="relative overflow-hidden pt-36 sm:pt-40 lg:pt-44">
-      <motion.div
-        style={{ y: glowY }}
-        className="pointer-events-none absolute inset-x-0 mx-auto top-20 h-80 w-[min(720px,80vw)] rounded-full bg-blue-500/15 blur-3xl hidden md:block"
-      />
-
-      <motion.div
-        variants={staggerContainer}
-        initial="hidden"
-        animate="visible"
-        className="section-shell"
-      >
-        <motion.div
-          variants={fadeIn}
-          className="glass-panel relative overflow-hidden rounded-[8px]"
-        >
-          <div className="flex h-11 items-center justify-between border-b border-white/10 bg-white/[0.035] px-4">
-            <div className="flex items-center gap-2">
-              <span className="size-3 rounded-full bg-[#ff5f57]" />
-              <span className="size-3 rounded-full bg-[#febc2e]" />
-              <span className="size-3 rounded-full bg-[#28c840]" />
+    <section id="home" className="relative overflow-hidden pt-36 sm:pt-40 lg:pt-44 pb-20">
+      <div className="section-shell">
+        <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8">
+          
+          {/* Text content - Left Bento */}
+          <div className="glass-panel flex flex-col justify-center p-8 sm:p-12 lg:p-14 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+            <div className="mb-8 inline-flex w-fit items-center gap-2 rounded-full border border-[#00ff66]/30 bg-[#00ff66]/10 px-4 py-2 text-sm font-bold text-[#00ff66] uppercase tracking-wider shadow-[0_0_20px_rgba(0,255,102,0.15)]">
+              <span className="relative flex size-2">
+                <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#00ff66] opacity-75" />
+                <span className="relative inline-flex size-2 rounded-full bg-[#00ff66]" />
+              </span>
+              {t("hero.available")}
             </div>
-            <div className="hidden h-5 w-44 rounded-full border border-white/8 bg-black/20 sm:block" />
-            <div className="h-5 w-16 rounded-full border border-white/8 bg-white/[0.04]" />
-          </div>
 
-          <div className="relative grid gap-10 p-5 sm:p-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-12 lg:p-10 xl:p-12">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_28%_20%,rgba(96,165,250,0.15),transparent_28%),radial-gradient(circle_at_78%_40%,rgba(168,85,247,0.14),transparent_30%)] hidden md:block" />
+            <h1 className="text-5xl font-black tracking-tight leading-[1.1] text-white sm:text-7xl lg:text-[5.5rem] xl:text-[6.5rem]">
+              <span className="block">{t("hero.title1")}</span>
+            </h1>
 
-            <motion.div
-              style={{ y: portraitY }}
-              variants={fadeUp}
-              className="relative min-h-[420px] overflow-hidden rounded-[8px] border border-white/10 bg-[#080808] lg:min-h-[560px]"
-            >
-              <Image
-                src="/images/mostafa-new.png"
-                alt="Mostafa Ahmed cinematic monochrome portrait"
-                fill
-                priority
-                sizes="(min-width: 1024px) 42vw, 92vw"
-                className="object-cover object-center grayscale"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
-              <div className="absolute bottom-5 inset-x-5 flex items-center justify-between gap-3 rounded-[8px] border border-white/12 bg-black/45 p-3 backdrop-blur-xl">
-                <span className="text-sm font-medium text-white">أنظمة نمو للشركات المحلية</span>
-                <span className="h-2 w-16 rounded-full bg-gradient-to-r from-blue-300 via-purple-300 to-green-300" />
-              </div>
-            </motion.div>
+            <p className="mt-8 text-xl font-medium text-[#a1a1aa] sm:text-2xl lg:text-3xl leading-relaxed">
+              {t("hero.title2")}
+            </p>
 
-            <div className="relative flex flex-col justify-center py-2 lg:py-8">
-              <motion.div
-                variants={fadeUp}
-                className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-green-300/25 bg-green-400/10 px-3 py-2 text-sm font-medium text-green-200 shadow-[0_0_40px_rgba(34,197,94,0.12)]"
+            <p className="mt-6 max-w-2xl text-base leading-8 text-[#a1a1aa]/80 sm:text-lg">
+              {t("hero.description")}
+            </p>
+
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a
+                href="https://wa.me/201061036045"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#00ff66] px-8 min-h-[64px] text-lg font-bold text-black transition-all hover:bg-[#00e5ff] hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(0,255,102,0.4)]"
               >
-                <span className="relative flex size-2">
-                  <span className="absolute inline-flex size-full animate-ping rounded-full bg-green-300 opacity-75" />
-                  <span className="relative inline-flex size-2 rounded-full bg-green-300" />
+                <FaWhatsapp className="size-6" />
+                {t("hero.cta")}
+                <FiArrowDownRight className="size-5 transition-transform group-hover:-rotate-45" />
+              </a>
+              <a
+                href="https://cal.com/mostafa-3slia"
+                className="group inline-flex items-center justify-center gap-3 rounded-full border border-white/20 bg-white/5 px-8 min-h-[64px] text-lg font-bold text-white transition-all hover:border-white/40 hover:bg-white/10 hover:scale-[1.02]"
+              >
+                <FiCalendar className="size-6" />
+                {t("hero.bookCall")}
+              </a>
+            </div>
+
+            <div className="mt-12 flex flex-wrap gap-2">
+              {heroChips.map((chip) => (
+                <span
+                  key={chip}
+                  className="inline-block cursor-default rounded-full border border-white/10 bg-white/5 px-4 py-2.5 text-sm font-semibold text-white backdrop-blur-xl transition-all duration-300 hover:border-[#00e5ff]/50 hover:bg-[#00e5ff]/10 hover:text-[#00e5ff] hover:shadow-[0_0_20px_rgba(0,229,255,0.2)] hover:-translate-y-[3px]"
+                >
+                  {chip}
                 </span>
-                {t("hero.available")}
-              </motion.div>
-
-              <motion.h1
-                variants={fadeUp}
-                className="metallic-text max-w-4xl text-5xl font-semibold tracking-normal leading-relaxed pb-3 sm:text-6xl lg:text-7xl xl:text-8xl"
-              >
-                {t("hero.title1")}
-              </motion.h1>
-
-              <motion.p
-                variants={fadeUp}
-                className="mt-5 text-lg font-medium text-white sm:text-xl lg:text-2xl"
-              >
-                {t("hero.title2")}
-              </motion.p>
-
-              <motion.p
-                variants={fadeUp}
-                className="mt-5 max-w-2xl text-base leading-8 text-gray-400 sm:text-lg"
-              >
-                {t("hero.description")}
-              </motion.p>
-
-              <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-4">
-                <Button href="https://wa.me/201061036045" target="_blank" rel="noopener noreferrer" icon={FaWhatsapp} className="font-semibold px-8 min-h-14 text-base">
-                  {t("hero.cta")}
-                </Button>
-                <Button href="https://cal.com/mostafa-3slia" variant="secondary" icon={FiCalendar} className="font-semibold px-8 min-h-14 text-base">
-                  {t("hero.bookCall")}
-                </Button>
-              </motion.div>
-
-              <motion.div variants={fadeUp} className="mt-7 flex flex-wrap gap-2">
-                {heroChips.map((chip) => (
-                  <motion.span
-                    key={chip}
-                    whileHover={{ y: -3, scale: 1.05, transition: { duration: 0.3, ease: [0.175, 0.885, 0.32, 1.275] } }}
-                    whileTap={{ scale: 0.95 }}
-                    className="inline-block cursor-default rounded-full border border-white/12 bg-white/[0.055] px-3 py-2 text-sm font-medium text-gray-300 backdrop-blur-xl transition-all duration-300 hover:border-blue-400/50 hover:bg-blue-500/10 hover:text-blue-300 hover:shadow-[0_0_20px_rgba(59,130,246,0.2)]"
-                  >
-                    {chip}
-                  </motion.span>
-                ))}
-              </motion.div>
-
+              ))}
             </div>
           </div>
-        </motion.div>
-      </motion.div>
+
+          {/* Image - Right Bento */}
+          <div className="glass-panel relative min-h-[500px] overflow-hidden lg:min-h-[600px] animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <Image
+              src="/images/mostafa-new.webp"
+              alt="Mostafa Ahmed portrait"
+              fill
+              priority
+              sizes="(min-width: 1024px) 42vw, 92vw"
+              className="object-cover object-top grayscale contrast-125 brightness-90 transition-transform duration-700 hover:scale-105 hover:grayscale-0"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+            
+            <div className="absolute bottom-0 inset-x-0 p-8">
+              <div className="inline-flex items-center justify-between gap-4 rounded-full border border-white/20 bg-black/50 px-6 py-4 backdrop-blur-xl">
+                <span className="text-base font-bold text-white">{t("hero.tag")}</span>
+                <span className="h-2 w-24 rounded-full bg-gradient-to-r from-[#00ff66] to-[#00e5ff]" />
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
   );
 }

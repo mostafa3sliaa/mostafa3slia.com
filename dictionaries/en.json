@@ -13,26 +13,41 @@
     "title2": "Web Developer & Digital Marketer",
     "description": "I build integrated digital platforms combining the power of programming with marketing intelligence to achieve your business goals.",
     "cta": "Get in touch",
-    "bookCall": "Book a Consultation"
+    "bookCall": "Book a Consultation",
+    "tag": "Growth Systems for Local Businesses"
   },
   "about": {
     "title": "About Me",
     "description1": "I'm Mostafa, a full-stack web developer and UI designer with extensive experience building medical platforms, news portals, e-commerce stores, and securing websites. I excel at merging modern development with effective digital marketing strategies.",
-    "description2": "My passion is transforming complex ideas into simple, elegant, and scalable technical solutions. Whether you need a complex SaaS dashboard or an integrated e-commerce store built for rapid growth."
+    "description2": "My passion is transforming complex ideas into simple, elegant, and scalable technical solutions. Whether you need a complex SaaS dashboard or an integrated e-commerce store built for rapid growth.",
+    "eyebrow": "About Me",
+    "title2": "Passionate Developer for Companies Needing More Than Just a Website.",
+    "description3": "Mostafa combines front-end engineering and digital marketing strategies into one business growth system."
   },
   "services": {
     "title": "My Services",
-    "subtitle": "Integrated Solutions"
+    "subtitle": "Integrated Solutions",
+    "eyebrow": "Services",
+    "title2": "Professional digital growth services for targeted markets and companies.",
+    "description2": "From UI design to marketing strategies, every service is tailored to convert attention into leads.",
+    "tag": "Conversion Focused"
   },
   "skills": {
     "title": "Technical Skills",
-    "subtitle": "Technologies & Tools"
+    "subtitle": "Technologies & Tools",
+    "eyebrow": "Skills",
+    "title2": "Essential Technologies and Tools for Growth and Development.",
+    "description2": "The best technologies for building fast interfaces and robust SEO-friendly applications.",
+    "tag": "Production Ready"
   },
   "projects": {
     "title": "Recent Work",
     "subtitle": "Selected Projects",
     "live": "Live Demo",
-    "code": "Source Code"
+    "code": "Source Code",
+    "eyebrow": "Projects",
+    "title2": "Selected works across websites, dashboards, and growth systems.",
+    "description2": "Each project is designed to be professional, fast-loading, and guide visitors towards taking effective action."
   },
   "stats": {
     "projects": "Completed Projects",
@@ -42,7 +57,10 @@
   },
   "testimonials": {
     "title": "Client Reviews",
-    "subtitle": "What they say"
+    "subtitle": "What they say",
+    "eyebrow": "Testimonials",
+    "title2": "Trusted by institutions, clinics, and companies.",
+    "description2": "Exceptional user experience matters when it helps businesses grow and convert with confidence."
   },
   "contact": {
     "title": "Let's work together",
@@ -54,10 +72,123 @@
       "message": "Your Message",
       "submit": "Send Message",
       "sending": "Sending..."
-    }
+    },
+    "eyebrow": "Contact Me",
+    "title2": "Let's build something amazing together",
+    "description2": "Book a free consultation or send a message to discuss your website or digital marketing growth plan.",
+    "box_title": "Ready to turn attention into sales and leads?",
+    "box_desc": "Share your current goals and target market. Mostafa will help you outline a clear path to success.",
+    "box_btn1": "Book Consultation",
+    "box_btn2": "Send Message"
   },
   "footer": {
     "copyright": "All rights reserved",
     "developer": "Mostafa Ahmed"
+  },
+  "data": {
+    "headerName": "Mostafa Ahmed",
+    "services": [
+      {
+        "title": "Web & App Development",
+        "description": "Building professional and fast websites, developing e-commerce stores, integrating payment gateways, and securing websites."
+      },
+      {
+        "title": "Digital Marketing & Campaigns",
+        "description": "Managing advertising campaigns and digital marketing to help companies increase sales and reach their target audience."
+      },
+      {
+        "title": "Search Engine Optimization (SEO)",
+        "description": "Designing and developing SEO-compliant websites to help companies top search results and increase organic traffic."
+      },
+      {
+        "title": "UI/UX Design",
+        "description": "Improving User Experience (UX) and User Interface (UI) design to ensure a smooth and distinctive interaction with your website visitors."
+      }
+    ],
+    "projects": [
+      {
+        "title": "Dr. Ashraf Retina Clinic",
+        "description": "A premium ophthalmology and retina clinic website designed and developed to provide a seamless patient experience. Includes service pages, SEO optimization, responsive design, WhatsApp appointment booking, multilingual support, medical blog system, and modern UI/UX built with Next.js."
+      },
+      {
+        "title": "SaaS Dashboard",
+        "description": "Advanced dashboard for managing sales and data with modern user interfaces and integration with payment services."
+      },
+      {
+        "title": "Modern E-commerce",
+        "description": "Integrated store with electronic payment gateways, product management, and high data security."
+      },
+      {
+        "title": "News Press Platform",
+        "description": "Fast-performing news website fully compliant with SEO search engines, and a content management dashboard."
+      }
+    ],
+    "stats": [
+      {
+        "value": "50",
+        "label": "Completed Projects"
+      },
+      {
+        "value": "100",
+        "label": "Happy Clients"
+      },
+      {
+        "value": "5",
+        "label": "Years Experience"
+      },
+      {
+        "value": "High Rating",
+        "label": "Mostaql"
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "Mostafa built our website highly professionally and linked it to ad campaigns that significantly doubled our sales.",
+        "name": "Ahmed Mahmoud",
+        "role": "Founder",
+        "company": "Leading Software Company"
+      },
+      {
+        "quote": "Excellent SEO expertise. We noticed a massive increase in organic traffic after working with him.",
+        "name": "Sarah Kamal",
+        "role": "Marketing Manager",
+        "company": "E-commerce Store"
+      },
+      {
+        "quote": "The dashboard he designed made it incredibly easy for us to manage data and clients. I highly recommend working with him.",
+        "name": "Omar Khaled",
+        "role": "Operations Manager",
+        "company": "Medical Institution"
+      }
+    ],
+    "contactMethods": [
+      {
+        "label": "Email"
+      },
+      {
+        "label": "WhatsApp"
+      },
+      {
+        "label": "GitHub"
+      }
+    ],
+    "aboutHighlights": [
+      {
+        "title": "Advanced SaaS Dashboards",
+        "description": "Building and developing advanced user interfaces and dashboards for startups and enterprises."
+      },
+      {
+        "title": "Stores & Payment Gateways",
+        "description": "Developing e-commerce stores with electronic payment gateway integration and website security."
+      },
+      {
+        "title": "Website & Data Security",
+        "description": "Securing websites and applications, and protecting sensitive data from breaches."
+      },
+      {
+        "title": "Press & Medical Platforms",
+        "description": "Extensive experience in building news platforms, medical sites, and high-converting landing pages."
+      }
+    ]
   }
 }

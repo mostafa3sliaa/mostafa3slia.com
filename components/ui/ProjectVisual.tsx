@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+
 import { FiActivity, FiCalendar, FiHome, FiMapPin, FiPieChart, FiStar } from "react-icons/fi";
 import { cn } from "@/lib/utils";
 import type { Project } from "@/types/portfolio";
@@ -50,12 +50,8 @@ export function ProjectVisual({ visual, accent, image }: ProjectVisualProps) {
       <div className={cn("absolute inset-x-0 top-0 h-32 bg-gradient-to-br opacity-70 blur-3xl", accentMap[accent])} />
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.045)_1px,transparent_1px)] bg-[size:24px_24px] opacity-45" />
 
-      <motion.div
-        className="absolute inset-x-5 top-5 rounded-[8px] border border-white/12 bg-white/[0.07] p-4 backdrop-blur-xl"
-        initial={{ y: 10, opacity: 0.82 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
+      <div
+        className="absolute inset-x-5 top-5 rounded-[8px] border border-white/12 bg-white/[0.07] p-4 backdrop-blur-xl transition-all duration-700"
       >
         <div className="mb-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
@@ -83,19 +79,17 @@ export function ProjectVisual({ visual, accent, image }: ProjectVisualProps) {
             <span className="block h-16 rounded-[8px] border border-white/10 bg-black/25" />
           </div>
         </div>
-      </motion.div>
+      </div>
 
-      <motion.div
+      <div
         className="absolute bottom-4 inset-x-6 h-10 rounded-full border border-white/10 bg-black/30 backdrop-blur-xl"
-        animate={{ x: [0, 6, 0] }}
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
       >
         <div className="flex h-full items-center gap-2 px-3">
           <span className={cn("size-2 rounded-full bg-gradient-to-r", accentMap[accent])} />
           <span className="h-2 flex-1 rounded-full bg-white/15" />
           <span className="h-2 w-10 rounded-full bg-white/25" />
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }

@@ -1,27 +1,20 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import { stats } from "@/data/portfolio";
-import { fadeUp, staggerContainer } from "@/lib/motion";
+
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function StatsSection() {
+  const { t, dict } = useLanguage();
   return (
     <section className="py-20 sm:py-24">
       <div className="section-shell">
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.22 }}
+        <div
           className="glass-panel grid overflow-hidden rounded-[8px] sm:grid-cols-2 lg:grid-cols-4"
         >
           {stats.map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              variants={fadeUp}
-              className="relative p-7 text-center sm:p-8"
-            >
+            <div key={index} className="relative p-7 text-center sm:p-8">
               {index > 0 ? (
                 <span className="absolute start-0 top-1/2 hidden h-16 w-px -translate-y-1/2 bg-white/12 lg:block" />
               ) : null}
@@ -29,13 +22,13 @@ export function StatsSection() {
                 {typeof stat.value === "number" && stat.animated ? (
                   <AnimatedCounter value={stat.value} suffix={stat.suffix} />
                 ) : (
-                  stat.value
+                  dict.data.stats[index].value
                 )}
               </div>
-              <p className="mt-3 text-sm font-medium uppercase text-gray-400">{stat.label}</p>
-            </motion.div>
+              <p className="mt-3 text-sm font-medium uppercase text-gray-400">{dict.data.stats[index].label}</p>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

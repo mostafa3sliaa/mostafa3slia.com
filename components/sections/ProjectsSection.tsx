@@ -1,89 +1,94 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
-import { GlassCard } from "@/components/ui/GlassCard";
 import { ProjectVisual } from "@/components/ui/ProjectVisual";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { projects } from "@/data/portfolio";
-import { fadeUp, staggerContainer } from "@/lib/motion";
 import { accentStyles, cn } from "@/lib/utils";
 
+import { useLanguage } from "@/contexts/LanguageContext";
+
 export function ProjectsSection() {
+  const { t , dict} = useLanguage();
   return (
-    <section id="projects" className="py-24 sm:py-28">
+    <section id="projects" className="py-24 sm:py-32">
       <div className="section-shell">
         <SectionHeader
-          eyebrow="المشاريع"
-          title="أعمال مختارة عبر المواقع ولوحات التحكم وأنظمة النمو."
-          description="تم تصميم كل مشروع ليكون احترافياً، سريع التحميل، ويوجه الزوار نحو اتخاذ إجراء فعال."
+          eyebrow={t("projects.eyebrow")}
+          title={t("projects.title2")}
+          description={t("projects.description2")}
         />
 
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-          className="grid gap-5 md:grid-cols-2 xl:grid-cols-3"
-        >
-          {projects.map((project) => {
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3 auto-rows-[minmax(400px,auto)]">
+          {projects.map((project, index) => {
+            const dictProject = dict.data.projects[index];
+            const title = dictProject.title;
+            const description = dictProject.description;
             const styles = accentStyles[project.accent];
+            
+            // Bento Box layout logic
+            const isFeatured = index === 0;
+            const isWide = index === 3;
+            
+            const bentoClasses = cn(
+              "glass-panel flex flex-col p-4 animate-fade-in-up",
+              isFeatured ? "md:col-span-2 xl:col-span-2" : "",
+              isWide ? "md:col-span-2 xl:col-span-3" : "",
+            );
 
             return (
-              <motion.div key={project.title} variants={fadeUp}>
-                <GlassCard className="flex h-full flex-col p-3">
+              <div key={title} className={bentoClasses} style={{ animationDelay: `${0.1 * index}s` }}>
+                <div className={cn("relative overflow-hidden rounded-xl", isFeatured ? "h-80" : "h-60")}>
                   <ProjectVisual visual={project.visual} accent={project.accent} image={project.image} />
+                </div>
 
-                  <div className="flex flex-1 flex-col p-3 pt-6">
-                    <h3 className="text-xl font-semibold text-white">{project.title}</h3>
-                    <p className="mt-3 text-sm leading-7 text-gray-400">{project.description}</p>
+                <div className="flex flex-1 flex-col pt-8 px-2">
+                  <h3 className="text-2xl font-bold text-white tracking-tight">{title}</h3>
+                  <p className="mt-4 text-base leading-relaxed text-[#a1a1aa]">{description}</p>
 
-                    <div className="mt-5 flex flex-wrap gap-2">
-                      {project.techStack.map((tech) => (
-                        <span
-                          key={tech}
-                          className="rounded-full border border-white/10 bg-white/[0.045] px-2.5 py-1.5 text-xs font-medium text-gray-300"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    {project.techStack.map((tech) => (
+                      <span
+                        key={tech}
+                        className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-md"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
 
-                    <div className="mt-auto flex gap-2 pt-6">
-                      <motion.a
-                        href={project.liveUrl}
+                  <div className="mt-auto flex gap-3 pt-8">
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={cn(
+                        "focus-ring inline-flex h-12 flex-1 items-center justify-center gap-2 rounded-xl border px-4 text-sm font-bold transition-all hover:-translate-y-1 hover:shadow-lg",
+                        styles.border,
+                        styles.bg,
+                        "text-white hover:bg-white/10",
+                      )}
+                    >
+                      <FiExternalLink aria-hidden className="size-5" />
+                      {t("projects.live")}
+                    </a>
+                    {project.sourceUrl && (
+                      <a
+                        href={project.sourceUrl}
                         target="_blank"
                         rel="noreferrer"
-                        whileHover={{ y: -2 }}
-                        className={cn(
-                          "focus-ring inline-flex min-h-10 flex-1 items-center justify-center gap-2 rounded-[8px] border px-3 text-sm font-semibold transition",
-                          styles.border,
-                          styles.bg,
-                          "text-white hover:bg-white/10",
-                        )}
+                        title={t("projects.code")}
+                        className="focus-ring grid h-12 w-12 place-items-center rounded-xl border border-white/10 bg-white/5 text-white transition-all hover:border-white/30 hover:bg-white/10 hover:-translate-y-1 hover:shadow-lg"
                       >
-                        <FiExternalLink aria-hidden className="size-4" />
-                        عرض مباشر
-                      </motion.a>
-                      {project.sourceUrl && (
-                        <motion.a
-                          href={project.sourceUrl}
-                          target="_blank"
-                          rel="noreferrer"
-                          title="الكود المصدري"
-                          whileHover={{ y: -2 }}
-                          className="focus-ring grid min-h-10 w-11 place-items-center rounded-[8px] border border-white/10 bg-white/[0.045] text-gray-300 transition hover:border-white/20 hover:text-white"
-                        >
-                          <FiGithub aria-hidden className="size-4" />
-                        </motion.a>
-                      )}
-                    </div>
+                        <FiGithub aria-hidden className="size-5" />
+                      </a>
+                    )}
                   </div>
-                </GlassCard>
-              </motion.div>
+                </div>
+              </div>
             );
           })}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { navItems, socialLinks } from "@/data/portfolio";
 import { cn } from "@/lib/utils";
@@ -9,7 +8,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 export function Header() {
   const [active, setActive] = useState("#home");
-  const { t, locale, setLocale } = useLanguage();
+  const { t, locale, setLocale , dict} = useLanguage();
 
   useEffect(() => {
     const sections = navItems
@@ -32,24 +31,18 @@ export function Header() {
   }, []);
 
   return (
-    <motion.header
-      initial={{ y: -32, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.7, ease: [0.21, 1, 0.21, 1] }}
-      className="fixed inset-x-0 top-0 z-50 border-b border-white/8 bg-black/30 backdrop-blur-2xl"
-    >
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/60 backdrop-blur-2xl transition-all duration-700">
       <div className="section-shell flex min-h-[72px] sm:min-h-20 items-center justify-between gap-4">
         <Link href="#home" className="focus-ring group flex items-center gap-3 rounded-[8px]">
-          <span className="relative grid size-11 place-items-center overflow-hidden rounded-[8px] border border-white/12 bg-white/[0.06] text-sm font-black text-white shadow-2xl shadow-blue-500/10">
-            <span className="absolute inset-0 bg-gradient-to-br from-white/18 via-transparent to-blue-400/18 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+          <span className="relative grid size-11 place-items-center overflow-hidden rounded-[8px] border border-white/12 bg-white/5 text-sm font-black text-white transition-all duration-300 group-hover:border-[#00ff66]/50 group-hover:shadow-[0_0_20px_rgba(0,255,102,0.2)]">
             <span className="relative">MA</span>
           </span>
-          <span className="text-xl font-black tracking-tight text-white">
-            مصطفى أحمد
+          <span className="text-xl font-black tracking-tight text-white transition-colors group-hover:text-[#00ff66]">
+            {dict.data.headerName}
           </span>
         </Link>
 
-        <nav className="hidden rounded-full border border-white/12 bg-white/[0.055] p-1 shadow-2xl shadow-black/30 backdrop-blur-2xl lg:flex">
+        <nav className="hidden rounded-full border border-white/10 bg-white/5 p-1.5 shadow-2xl backdrop-blur-2xl lg:flex">
           {navItems.map((item) => {
             const isActive = active === item.href;
 
@@ -58,16 +51,12 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "focus-ring relative rounded-full px-4 py-2 text-sm font-medium transition-all duration-300",
-                  isActive ? "text-white" : "text-gray-400 hover:text-blue-300 hover:bg-white/[0.03]",
+                  "focus-ring relative rounded-full px-5 py-2 text-sm font-bold uppercase tracking-wider transition-all duration-300",
+                  isActive ? "text-black" : "text-gray-400 hover:text-white",
                 )}
               >
                 {isActive && (
-                  <motion.span
-                    layoutId="active-nav"
-                    className="absolute inset-0 -z-10 rounded-full border border-white/12 bg-white/10 shadow-[0_0_32px_rgba(96,165,250,0.18)]"
-                    transition={{ type: "spring", stiffness: 360, damping: 32 }}
-                  />
+                  <span className="absolute inset-0 -z-10 rounded-full bg-[#00ff66] shadow-[0_0_20px_rgba(0,255,102,0.3)]" />
                 )}
                 <span className="relative">{t(`nav.${item.key}`)}</span>
               </Link>
@@ -77,30 +66,26 @@ export function Header() {
 
         <div className="flex items-center gap-1.5 sm:gap-2">
           {socialLinks.map(({ href, label, icon: Icon }) => (
-            <motion.a
+            <a
               key={label}
               href={href}
               target={href.startsWith("http") ? "_blank" : undefined}
               rel={href.startsWith("http") ? "noreferrer" : undefined}
               title={label}
-              whileHover={{ y: -2, scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="focus-ring inline-flex size-10 items-center justify-center gap-2 rounded-[8px] border border-white/12 bg-white/[0.055] text-gray-300 shadow-xl shadow-black/20 backdrop-blur-xl transition-all duration-300 hover:border-blue-400/40 hover:bg-blue-500/10 hover:text-blue-300 hover:shadow-[0_0_20px_rgba(59,130,246,0.25)]"
+              className="focus-ring inline-flex size-10 items-center justify-center gap-2 rounded-[8px] border border-white/10 bg-white/5 text-gray-300 transition-all duration-300 hover:border-[#00e5ff]/50 hover:bg-[#00e5ff]/10 hover:text-[#00e5ff] hover:shadow-[0_0_20px_rgba(0,229,255,0.25)] hover:-translate-y-[2px]"
             >
               <Icon aria-hidden className="size-4" />
-            </motion.a>
+            </a>
           ))}
           
           <div className="h-6 w-px bg-white/10 mx-1" />
 
-          <motion.button
-            whileHover={{ y: -2, scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+          <button
             onClick={() => setLocale(locale === "ar" ? "en" : "ar")}
-            className="focus-ring inline-flex size-10 items-center justify-center rounded-[8px] border border-white/12 bg-white/[0.055] text-sm font-bold text-gray-300 shadow-xl shadow-black/20 backdrop-blur-xl transition-all duration-300 hover:border-blue-400/40 hover:bg-blue-500/10 hover:text-blue-300 hover:shadow-[0_0_20px_rgba(59,130,246,0.25)]"
+            className="focus-ring inline-flex size-10 items-center justify-center rounded-[8px] border border-white/10 bg-white/5 text-sm font-black text-white transition-all duration-300 hover:border-[#00e5ff]/50 hover:bg-[#00e5ff]/10 hover:text-[#00e5ff] hover:shadow-[0_0_20px_rgba(0,229,255,0.25)] hover:-translate-y-[2px]"
           >
             {locale === "ar" ? "EN" : "AR"}
-          </motion.button>
+          </button>
         </div>
       </div>
 
@@ -110,10 +95,10 @@ export function Header() {
             key={item.href}
             href={item.href}
             className={cn(
-              "focus-ring shrink-0 whitespace-nowrap rounded-full border px-4 py-2 text-sm transition-all duration-300",
+              "focus-ring shrink-0 whitespace-nowrap rounded-full border px-4 py-2 text-sm font-bold uppercase tracking-wider transition-all duration-300",
               active === item.href
-                ? "border-blue-300/30 bg-blue-400/10 text-white"
-                : "border-white/10 bg-white/[0.04] text-gray-400 hover:border-blue-400/30 hover:bg-white/[0.08] hover:text-blue-300",
+                ? "border-[#00ff66] bg-[#00ff66] text-black"
+                : "border-white/10 bg-white/5 text-gray-400 hover:border-[#00ff66]/50 hover:text-white",
             )}
             onClick={(e) => {
               e.preventDefault();
@@ -124,6 +109,6 @@ export function Header() {
           </Link>
         ))}
       </div>
-    </motion.header>
+    </header>
   );
 }

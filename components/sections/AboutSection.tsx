@@ -1,40 +1,35 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { GlassCard } from "@/components/ui/GlassCard";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { aboutHighlights } from "@/data/portfolio";
-import { fadeUp, staggerContainer } from "@/lib/motion";
+
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function AboutSection() {
+  const { t , dict} = useLanguage();
   return (
-    <section id="about" className="py-24 sm:py-28">
+    <section id="about" className="py-24 sm:py-32 relative">
       <div className="section-shell">
         <SectionHeader
-          eyebrow="من أنا"
-          title="مطور شغوف للشركات التي تحتاج لأكثر من مجرد موقع."
-          description="يجمع مصطفى بين هندسة الواجهات الأمامية واستراتيجيات التسويق الرقمي في نظام واحد لنمو الأعمال."
+          eyebrow={t("about.eyebrow")}
+          title={t("about.title2")}
+          description={t("about.description3")}
         />
 
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          className="grid gap-4 md:grid-cols-2 xl:grid-cols-4"
-        >
-          {aboutHighlights.map(({ title, description, icon: Icon }) => (
-            <motion.div key={title} variants={fadeUp}>
-              <GlassCard className="h-full">
-                <span className="mb-5 grid size-11 place-items-center rounded-[8px] border border-white/12 bg-white/[0.06] text-blue-200 transition-all duration-300 group-hover:border-blue-400/50 group-hover:bg-blue-500/10 group-hover:text-blue-300 group-hover:shadow-[0_0_25px_rgba(59,130,246,0.4)]">
-                  <Icon aria-hidden className="size-5 transition-transform duration-300 group-hover:scale-110" />
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          {aboutHighlights.map(({ icon: Icon }, index) => {
+            const dictItem = dict.data.aboutHighlights[index];
+            return (
+              <div key={index} className="glass-panel group flex flex-col p-6 sm:p-8 animate-fade-in-up" style={{ animationDelay: `${0.1 * index}s` }}>
+                <span className="mb-8 flex size-14 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-[#00e5ff] transition-all duration-500 group-hover:-translate-y-2 group-hover:scale-110 group-hover:border-[#00e5ff]/50 group-hover:bg-[#00e5ff]/10 group-hover:shadow-[0_0_30px_rgba(0,229,255,0.3)]">
+                  <Icon aria-hidden className="size-6 transition-transform duration-300 group-hover:scale-110" />
                 </span>
-                <h3 className="text-lg font-semibold text-white">{title}</h3>
-                <p className="mt-3 text-sm leading-6 text-gray-400">{description}</p>
-              </GlassCard>
-            </motion.div>
-          ))}
-        </motion.div>
+                <h3 className="text-2xl font-bold text-white tracking-tight">{dictItem.title}</h3>
+                <p className="mt-4 text-base leading-relaxed text-[#a1a1aa]">{dictItem.description}</p>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

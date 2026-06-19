@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Cairo } from "next/font/google";
 import "./globals.css";
 
-const cairo = Cairo({ subsets: ["arabic"] });
+const cairo = Cairo({ subsets: ["arabic"], weight: ["400", "700"], display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mostafa-ahmed.dev"),
