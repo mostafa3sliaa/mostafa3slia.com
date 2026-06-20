@@ -122,6 +122,17 @@ export const projects: Project[] = [
     accent: "blue",
     visual: "realEstate",
   },
+  {
+    title: "رعاية تك - سيستم إدارة عيادات",
+    description:
+      "نظام متكامل لإدارة العيادات، يتيح لك إدارة عيادتك بالكامل من شاشة واحدة. يشمل تنظيم ملفات المرضى، جدولة المواعيد، وتتبع الحسابات.",
+    techStack: ["Next.js", "React", "Node.js", "Tailwind CSS"],
+    liveUrl: "",
+    sourceUrl: "",
+    accent: "blue",
+    visual: "medical",
+    image: "/ra3aya.png",
+  },
 ];
 
 export const stats: Stat[] = [
