@@ -69,8 +69,8 @@ body::after {
 }
 
 ::target-text {
-  background: transparent;
-  color: inherit;
+  background-color: transparent !important;
+  color: inherit !important;
 }
 
 a,
