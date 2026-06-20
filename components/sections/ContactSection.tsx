@@ -33,10 +33,35 @@ export function ContactSection() {
                 {t("contact.box_desc")}
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Button href="https://cal.com/mostafa-3slia" icon={FiCalendar}>
+                <Button 
+                  href="https://cal.com/mostafa-3slia" 
+                  icon={FiCalendar}
+                  onClick={() => {
+                    if (typeof window !== "undefined" && (window as any).gtag) {
+                      (window as any).gtag('event', 'conversion', {
+                        'send_to': 'AW-18257364372/Q1rICPH12sIcEJSL5YFE',
+                        'value': 1.0,
+                        'currency': 'EGP'
+                      });
+                    }
+                  }}
+                >
                   {t("contact.box_btn1")}
                 </Button>
-                <Button href="mailto:hello@mostafa3slia.com" icon={FiSend} variant="secondary">
+                <Button 
+                  href="mailto:hello@mostafa3slia.com" 
+                  icon={FiSend} 
+                  variant="secondary"
+                  onClick={() => {
+                    if (typeof window !== "undefined" && (window as any).gtag) {
+                      (window as any).gtag('event', 'conversion', {
+                        'send_to': 'AW-18257364372/Q1rICPH12sIcEJSL5YFE',
+                        'value': 1.0,
+                        'currency': 'EGP'
+                      });
+                    }
+                  }}
+                >
                   {t("contact.box_btn2")}
                 </Button>
               </div>
@@ -51,6 +76,15 @@ export function ContactSection() {
                     href={href}
                     target={href.startsWith("http") ? "_blank" : undefined}
                     rel={href.startsWith("http") ? "noreferrer" : undefined}
+                    onClick={() => {
+                      if (typeof window !== "undefined" && (window as any).gtag) {
+                        (window as any).gtag('event', 'conversion', {
+                          'send_to': 'AW-18257364372/Q1rICPH12sIcEJSL5YFE',
+                          'value': 1.0,
+                          'currency': 'EGP'
+                        });
+                      }
+                    }}
                     className="focus-ring rounded-[8px] border border-white/10 bg-black/20 p-5 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] hover:border-blue-300/25 hover:bg-white/[0.06]"
                   >
                     <span className="mb-5 grid size-11 place-items-center rounded-[8px] border border-white/12 bg-white/[0.06] text-blue-200">

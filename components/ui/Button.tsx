@@ -14,14 +14,16 @@ type ButtonProps = {
   className?: string;
   target?: string;
   rel?: string;
+  onClick?: () => void;
 };
 
-export function Button({ href, children, icon: Icon = FiArrowRight, variant = "primary", className, target, rel }: ButtonProps) {
+export function Button({ href, children, icon: Icon = FiArrowRight, variant = "primary", className, target, rel, onClick }: ButtonProps) {
   return (
     <Link
       href={href}
       target={target}
       rel={rel}
+      onClick={onClick}
       className={cn(
         "focus-ring inline-flex min-h-12 items-center justify-center gap-2 rounded-[8px] border px-5 text-sm font-semibold transition-all duration-300 hover:-translate-y-[3px] hover:scale-[1.02] active:scale-[0.98]",
         variant === "primary"

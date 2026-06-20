@@ -41,6 +41,15 @@ export function HeroSection() {
                 href="https://wa.me/201061036045"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => {
+                  if (typeof window !== "undefined" && (window as any).gtag) {
+                    (window as any).gtag('event', 'conversion', {
+                      'send_to': 'AW-18257364372/Q1rICPH12sIcEJSL5YFE',
+                      'value': 1.0,
+                      'currency': 'EGP'
+                    });
+                  }
+                }}
                 className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#00ff66] px-8 min-h-[64px] text-lg font-bold text-black transition-all hover:bg-[#00e5ff] hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(0,255,102,0.4)]"
               >
                 <FaWhatsapp className="size-6" />
@@ -49,6 +58,15 @@ export function HeroSection() {
               </a>
               <a
                 href="https://cal.com/mostafa-3slia"
+                onClick={() => {
+                  if (typeof window !== "undefined" && (window as any).gtag) {
+                    (window as any).gtag('event', 'conversion', {
+                      'send_to': 'AW-18257364372/Q1rICPH12sIcEJSL5YFE',
+                      'value': 1.0,
+                      'currency': 'EGP'
+                    });
+                  }
+                }}
                 className="group inline-flex items-center justify-center gap-3 rounded-full border border-white/20 bg-white/5 px-8 min-h-[64px] text-lg font-bold text-white transition-all hover:border-white/40 hover:bg-white/10 hover:scale-[1.02]"
               >
                 <FiCalendar className="size-6" />
