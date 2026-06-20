@@ -36,8 +36,7 @@ export function ProjectVisual({ visual, accent, image }: ProjectVisualProps) {
           src={image}
           alt="Project Screenshot"
           fill
-          className="object-cover object-top transition-all ease-linear group-hover:object-bottom"
-          style={{ transitionDuration: '5s' }}
+          className="object-contain transition-all hover:scale-105"
         />
       </div>
     );

@@ -115,17 +115,7 @@ export const projects: Project[] = [
     visual: "medical",
     image: "/dr-fawzy.png",
   },
-  {
-    title: "EduTech Learning Platform",
-    description:
-      "منصة تعليمية متكاملة تقدم دورات عبر الإنترنت، مع تتبع تقدم الطلاب، مشغل فيديو حديث، ولوحة تحكم شاملة.",
-    techStack: ["React", "Node.js", "MongoDB", "Express"],
-    liveUrl: "",
-    sourceUrl: "",
-    accent: "purple",
-    visual: "saas",
-    image: "/edu_tech.png",
-  },
+
   {
     title: "Premium Real Estate Hub",
     description:
