@@ -138,7 +138,7 @@ export const testimonials: Testimonial[] = [
 ];
 
 export const contactMethods: ContactMethod[] = [
-  { label: "البريد الإلكتروني", value: "hello@mostafa3slia.com", href: "mailto:hello@mostafa3slia.com", icon: FiMail },
+  { label: "البريد الإلكتروني", value: "mostafa.3slia2020@gmail.com", href: "mailto:mostafa.3slia2020@gmail.com", icon: FiMail },
   { label: "واتساب", value: "+20 106 103 6045", href: "https://wa.me/201061036045", icon: FaWhatsapp },
   { label: "جيت هب", value: "github.com/mostafa-ahmed", href: "https://github.com/", icon: FiGithub },
 ];
