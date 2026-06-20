@@ -68,6 +68,11 @@ body::after {
   color: white;
 }
 
+::target-text {
+  background: transparent;
+  color: inherit;
+}
+
 a,
 button {
   -webkit-tap-highlight-color: transparent;
