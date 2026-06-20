@@ -82,15 +82,15 @@ export const skills: Skill[] = [
 
 export const projects: Project[] = [
   {
-    title: "Dr. Ashraf Retina Clinic",
+    title: "EyeRetina - Dr. Ashraf Shoukry",
     description:
-      "A premium ophthalmology and retina clinic website designed and developed to provide a seamless patient experience. Includes service pages, SEO optimization, responsive design, WhatsApp appointment booking, multilingual support, medical blog system, and modern UI/UX built with Next.js.",
-    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "SEO"],
+      "موقع طبي متقدم لعيادة EyeRetina التخصصية لطب وجراحة الشبكية. يتميز بتصميم عصري داكن (Dark Mode)، عرض تفصيلي للخدمات، ونظام حجز مواعيد سلس.",
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "SEO"],
     liveUrl: "https://drashrf.netlify.app/ar",
     sourceUrl: "",
     accent: "blue",
     visual: "medical",
-    image: "/dr-ashraf.webp",
+    image: "/eyeretina.png",
   },
 
   {
