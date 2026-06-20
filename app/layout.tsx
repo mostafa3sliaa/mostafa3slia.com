@@ -5,7 +5,7 @@ import "./globals.css";
 const cairo = Cairo({ subsets: ["arabic"], weight: ["400", "700"], display: "swap" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mostafa-ahmed.dev"),
+  metadataBase: new URL("https://mostafa3slia.com"),
   title: {
     default: "مصطفى أحمد | مطور ويب وخبير تسويق رقمي",
     template: "%s | مصطفى أحمد",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "مصطفى أحمد | مطور ويب وخبير تسويق رقمي",
     description:
       "مطور ويب متكامل (MERN Stack & Next.js) متخصص في بناء مواقع برمجية احترافية وسريعة، وتطوير المتاجر الإلكترونية، بالإضافة إلى تقديم خدمات التسويق الرقمي.",
-    url: "https://mostafa-ahmed.dev",
+    url: "https://mostafa3slia.com",
     siteName: "محفظة مصطفى أحمد",
     images: [
       {

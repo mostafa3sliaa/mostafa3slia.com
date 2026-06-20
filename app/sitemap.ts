@@ -4,7 +4,7 @@ export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Using the domain defined in your layout.tsx metadataBase
-  const baseUrl = 'https://mostafa-ahmed.dev';
+  const baseUrl = 'https://mostafa3slia.com';
   
   return [
     {

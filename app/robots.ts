@@ -3,7 +3,7 @@ import type { MetadataRoute } from 'next'
 export const dynamic = "force-static";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://mostafa-ahmed.dev';
+  const baseUrl = 'https://mostafa3slia.com';
 
   return {
     rules: {
