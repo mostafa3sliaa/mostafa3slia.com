@@ -104,6 +104,50 @@ export const projects: Project[] = [
     visual: "medical",
     image: "/ra3aya.png",
   },
+  {
+    title: "Dr. Ahmed Fawzy Dental Clinic",
+    description:
+      "رعاية أسنان استثنائية وعلاج متكامل. موقع تعريفي للعيادة يتيح للمرضى تصفح الخدمات، وحجز الاستشارات بسهولة.",
+    techStack: ["Next.js", "React", "Tailwind CSS", "SEO"],
+    liveUrl: "",
+    sourceUrl: "",
+    accent: "green",
+    visual: "medical",
+    image: "/dr-fawzy.png",
+  },
+  {
+    title: "EduTech Learning Platform",
+    description:
+      "منصة تعليمية متكاملة تقدم دورات عبر الإنترنت، مع تتبع تقدم الطلاب، مشغل فيديو حديث، ولوحة تحكم شاملة.",
+    techStack: ["React", "Node.js", "MongoDB", "Express"],
+    liveUrl: "",
+    sourceUrl: "",
+    accent: "purple",
+    visual: "saas",
+    image: "/edu_tech.png",
+  },
+  {
+    title: "Premium Real Estate Hub",
+    description:
+      "منصة عقارية حديثة لعرض العقارات مع خريطة تفاعلية، خيارات تصفية متقدمة، وتصميم أنيق.",
+    techStack: ["Next.js", "Prisma", "PostgreSQL", "Maps API"],
+    liveUrl: "",
+    sourceUrl: "",
+    accent: "green",
+    visual: "realEstate",
+    image: "/real_estate.png",
+  },
+  {
+    title: "Fitness Tracker App",
+    description:
+      "تطبيق ويب لتتبع اللياقة البدنية، يعرض رسوم بيانية تفاعلية للنشاط اليومي، الأهداف، وسجل التمارين.",
+    techStack: ["Vue.js", "Tailwind", "Firebase", "Chart.js"],
+    liveUrl: "",
+    sourceUrl: "",
+    accent: "blue",
+    visual: "growth",
+    image: "/fitness_tracker.png",
+  },
 ];
 
 export const stats: Stat[] = [

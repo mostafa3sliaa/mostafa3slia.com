@@ -116,6 +116,22 @@
       {
         "title": "Ra3aya Tech - Clinic Management System",
         "description": "An integrated clinic management system that allows you to manage your entire clinic from one screen. It includes paperless patient records, precise appointment scheduling, and revenue tracking."
+      },
+      {
+        "title": "Dr. Ahmed Fawzy Dental Clinic",
+        "description": "Dr. Ahmed Fawzy Dental Clinic. Exceptional dental care and comprehensive treatment. A corporate website for the clinic that allows patients to browse services and book consultations easily."
+      },
+      {
+        "title": "EduTech Learning Platform",
+        "description": "An integrated educational platform offering online courses, featuring student progress tracking, a modern video player, and a comprehensive statistics dashboard."
+      },
+      {
+        "title": "Premium Real Estate Hub",
+        "description": "A modern real estate platform for property listings featuring an interactive map, advanced filtering options, and an elegant design focused on user experience."
+      },
+      {
+        "title": "Fitness Tracker App",
+        "description": "A fitness tracking web application that displays interactive charts for daily activity, goals, and workout history."
       }
     ],
     "stats": [
