@@ -23,6 +23,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "مصطفى أحمد" }],
   creator: "مصطفى أحمد",
+  alternates: {
+    canonical: "https://mostafa3slia.com",
+  },
   openGraph: {
     title: "مصطفى أحمد | مطور ويب وخبير تسويق رقمي",
     description:
