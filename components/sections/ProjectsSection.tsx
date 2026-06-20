@@ -58,20 +58,22 @@ export function ProjectsSection() {
                   </div>
 
                   <div className="mt-auto flex gap-3 pt-8">
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className={cn(
-                        "focus-ring inline-flex h-12 flex-1 items-center justify-center gap-2 rounded-xl border px-4 text-sm font-bold transition-all hover:-translate-y-1 hover:shadow-lg",
-                        styles.border,
-                        styles.bg,
-                        "text-white hover:bg-white/10",
-                      )}
-                    >
-                      <FiExternalLink aria-hidden className="size-5" />
-                      {t("projects.live")}
-                    </a>
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className={cn(
+                          "focus-ring inline-flex h-12 flex-1 items-center justify-center gap-2 rounded-xl border px-4 text-sm font-bold transition-all hover:-translate-y-1 hover:shadow-lg",
+                          styles.border,
+                          styles.bg,
+                          "text-white hover:bg-white/10",
+                        )}
+                      >
+                        <FiExternalLink aria-hidden className="size-5" />
+                        {t("projects.live")}
+                      </a>
+                    )}
                     {project.sourceUrl && (
                       <a
                         href={project.sourceUrl}
