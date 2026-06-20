@@ -26,19 +26,13 @@ export function ProjectsSection() {
             const description = dictProject.description;
             const styles = accentStyles[project.accent];
             
-            // Bento Box layout logic
-            const isFeatured = index === 0;
-            const isWide = index === 3;
-            
             const bentoClasses = cn(
               "glass-panel flex flex-col p-4 animate-fade-in-up",
-              isFeatured ? "md:col-span-2 xl:col-span-2" : "",
-              isWide ? "md:col-span-2 xl:col-span-3" : "",
             );
 
             return (
               <div key={title} className={bentoClasses} style={{ animationDelay: `${0.1 * index}s` }}>
-                <div className={cn("relative overflow-hidden rounded-xl", isFeatured ? "h-80" : "h-60")}>
+                <div className={cn("relative overflow-hidden rounded-xl", "h-60")}>
                   <ProjectVisual visual={project.visual} accent={project.accent} image={project.image} />
                 </div>
 
