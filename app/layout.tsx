@@ -50,6 +50,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
   },
+  verification: {
+    google: "qUCAucCwBA7CQs1tis4gVakyZursEKMohRhwXVAFfpo",
+  },
 };
 
 export const viewport: Viewport = {
