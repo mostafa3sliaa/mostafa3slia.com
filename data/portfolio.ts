@@ -92,36 +92,7 @@ export const projects: Project[] = [
     visual: "medical",
     image: "/dr-ashraf.webp",
   },
-  {
-    title: "لوحة تحكم SaaS",
-    description:
-      "لوحة تحكم متقدمة لإدارة المبيعات والبيانات مع واجهات مستخدم حديثة وتكامل مع خدمات الدفع.",
-    techStack: ["React", "Charts", "Node.js", "APIs"],
-    liveUrl: "https://example.com",
-    sourceUrl: "https://github.com/",
-    accent: "green",
-    visual: "saas",
-  },
-  {
-    title: "متجر إلكتروني حديث",
-    description:
-      "متجر متكامل مع بوابات الدفع الإلكتروني، إدارة المنتجات، وتأمين عالٍ للبيانات.",
-    techStack: ["Next.js", "MongoDB", "Framer", "Stripe"],
-    liveUrl: "https://example.com",
-    sourceUrl: "https://github.com/",
-    accent: "purple",
-    visual: "growth",
-  },
-  {
-    title: "منصة صحفية إخبارية",
-    description:
-      "موقع إخباري سريع الأداء متوافق تماماً مع محركات البحث SEO، ولوحة تحكم لإدارة المحتوى.",
-    techStack: ["React", "Laravel", "Tailwind", "SEO"],
-    liveUrl: "https://example.com",
-    sourceUrl: "https://github.com/",
-    accent: "blue",
-    visual: "realEstate",
-  },
+
   {
     title: "رعاية تك - سيستم إدارة عيادات",
     description:

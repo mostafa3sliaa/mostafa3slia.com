@@ -9,9 +9,13 @@ import { cn } from "@/lib/utils";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export function TestimonialsSection() {
-  const { t , dict} = useLanguage();
+  const { locale, t , dict} = useLanguage();
+  const isRtl = locale === "ar";
   const [active, setActive] = useState(0);
   const activeTestimonial = dict.data.testimonials[active];
+
+  const PrevIcon = isRtl ? FiArrowRight : FiArrowLeft;
+  const NextIcon = isRtl ? FiArrowLeft : FiArrowRight;
 
   const controls = useMemo(
     () => ({
@@ -90,7 +94,7 @@ export function TestimonialsSection() {
                 onClick={controls.previous}
                 className="focus-ring grid size-11 place-items-center rounded-[8px] border border-white/12 bg-white/[0.055] text-gray-300 transition hover:text-white hover:-translate-y-[2px]"
               >
-                <FiArrowLeft aria-hidden className="size-4" />
+                <PrevIcon aria-hidden className="size-4" />
               </button>
               <button
                 type="button"
@@ -98,7 +102,7 @@ export function TestimonialsSection() {
                 onClick={controls.next}
                 className="focus-ring grid size-11 place-items-center rounded-[8px] border border-white/12 bg-white/[0.055] text-gray-300 transition hover:text-white hover:-translate-y-[2px]"
               >
-                <FiArrowRight aria-hidden className="size-4" />
+                <NextIcon aria-hidden className="size-4" />
               </button>
             </div>
           </div>
