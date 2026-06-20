@@ -83,7 +83,9 @@
   },
   "footer": {
     "copyright": "جميع الحقوق محفوظة",
-    "developer": "مصطفى أحمد"
+    "developer": "مصطفى أحمد",
+    "privacyPolicy": "سياسة الخصوصية",
+    "termsOfUse": "شروط الاستخدام"
   },
   "data": {
     "headerName": "مصطفى أحمد",

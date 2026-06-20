@@ -10,9 +10,19 @@ export function Footer() {
   return (
     <footer className="border-t border-white/8 py-8">
       <div className="section-shell flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
-        <p className="text-sm text-gray-500">
-          {t("footer.copyright")} {new Date().getFullYear()} {dict.data.headerName}.
-        </p>
+        <div className="flex flex-col items-center gap-1 sm:items-start">
+          <p className="text-sm text-gray-500">
+            {t("footer.copyright")} {new Date().getFullYear()} {dict.data.headerName}.
+          </p>
+          <div className="flex gap-4 text-xs text-gray-400">
+            <Link href="/privacy-policy" className="hover:text-white transition">
+              {t("footer.privacyPolicy")}
+            </Link>
+            <Link href="/terms-of-use" className="hover:text-white transition">
+              {t("footer.termsOfUse")}
+            </Link>
+          </div>
+        </div>
         <div className="flex items-center gap-2">
           {socialLinks.map(({ href, label, icon: Icon }) => (
             <Link

@@ -83,7 +83,9 @@
   },
   "footer": {
     "copyright": "All rights reserved",
-    "developer": "Mostafa Ahmed"
+    "developer": "Mostafa Ahmed",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfUse": "Terms of Use"
   },
   "data": {
     "headerName": "Mostafa Ahmed",
