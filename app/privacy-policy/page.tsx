@@ -5,8 +5,8 @@ import Link from "next/link";
 import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
 
 export default function PrivacyPolicy() {
-  const { lang, t } = useLanguage();
-  const isRtl = lang === "ar";
+  const { locale, t } = useLanguage();
+  const isRtl = locale === "ar";
   const Arrow = isRtl ? FiArrowRight : FiArrowLeft;
 
   return (
