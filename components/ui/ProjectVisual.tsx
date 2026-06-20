@@ -36,7 +36,7 @@ export function ProjectVisual({ visual, accent, image }: ProjectVisualProps) {
           src={image}
           alt="Project Screenshot"
           fill
-          className="object-cover object-center transition-all hover:scale-105"
+          className="object-contain object-center transition-all hover:scale-105"
         />
       </div>
     );

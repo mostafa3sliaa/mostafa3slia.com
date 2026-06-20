@@ -86,7 +86,7 @@ export const projects: Project[] = [
     description:
       "موقع طبي متقدم لعيادة EyeRetina التخصصية لطب وجراحة الشبكية. يتميز بتصميم عصري داكن (Dark Mode)، عرض تفصيلي للخدمات، ونظام حجز مواعيد سلس.",
     techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "SEO"],
-    liveUrl: "https://drashrf.netlify.app/ar",
+    liveUrl: "",
     sourceUrl: "",
     accent: "blue",
     visual: "medical",
