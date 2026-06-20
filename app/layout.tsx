@@ -80,6 +80,7 @@ export const viewport: Viewport = {
   maximumScale: 5,
 };
 
+import Script from "next/script";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 
 export default function RootLayout({
@@ -89,6 +90,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ar" dir="rtl">
+      <head>
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18257364372"
+        />
+        <Script
+          id="google-ads-tag"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-18257364372');
+            `,
+          }}
+        />
+      </head>
       <body className={`${cairo.className} antialiased`}>
         <LanguageProvider>
           {children}
