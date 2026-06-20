@@ -31,12 +31,12 @@ const iconMap = {
 export function ProjectVisual({ visual, accent, image }: ProjectVisualProps) {
   if (image) {
     return (
-      <div className="relative h-56 overflow-hidden rounded-[8px] bg-[#090909]">
+      <div className="relative h-56 w-full overflow-hidden rounded-[8px]">
         <Image
           src={image}
           alt="Project Screenshot"
           fill
-          className="object-contain transition-all hover:scale-105"
+          className="object-cover object-center transition-all hover:scale-105"
         />
       </div>
     );
