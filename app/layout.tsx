@@ -90,7 +90,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ar" dir="rtl">
-      <head>
+      <body className={`${cairo.className} antialiased`}>
         <Script
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=AW-18257364372"
@@ -107,8 +107,6 @@ export default function RootLayout({
             `,
           }}
         />
-      </head>
-      <body className={`${cairo.className} antialiased`}>
         <LanguageProvider>
           {children}
         </LanguageProvider>
