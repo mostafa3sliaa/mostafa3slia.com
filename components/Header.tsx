@@ -72,7 +72,7 @@ export function Header() {
               target={href.startsWith("http") ? "_blank" : undefined}
               rel={href.startsWith("http") ? "noreferrer" : undefined}
               title={label}
-              className="focus-ring inline-flex size-10 items-center justify-center gap-2 rounded-[8px] border border-white/10 bg-white/5 text-gray-300 transition-all duration-300 hover:border-[#00e5ff]/50 hover:bg-[#00e5ff]/10 hover:text-[#00e5ff] hover:shadow-[0_0_20px_rgba(0,229,255,0.25)] hover:-translate-y-[2px]"
+              className="focus-ring hidden sm:inline-flex size-10 items-center justify-center gap-2 rounded-[8px] border border-white/10 bg-white/5 text-gray-300 transition-all duration-300 hover:border-[#00e5ff]/50 hover:bg-[#00e5ff]/10 hover:text-[#00e5ff] hover:shadow-[0_0_20px_rgba(0,229,255,0.25)] hover:-translate-y-[2px]"
             >
               <Icon aria-hidden className="size-4" />
             </a>
@@ -89,7 +89,7 @@ export function Header() {
         </div>
       </div>
 
-      <div className="no-scrollbar flex w-full flex-nowrap overflow-x-auto px-4 sm:px-6 pb-3 lg:hidden">
+      <div className="no-scrollbar flex w-full flex-nowrap gap-2 overflow-x-auto px-4 sm:px-6 pb-3 lg:hidden">
         {navItems.map((item) => (
           <Link
             key={item.href}
