@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     siteName: "محفظة مصطفى أحمد",
     images: [
       {
-        url: "/images/mostafa-portrait.png",
+        url: "/images/mostafa-new.webp",
         width: 1200,
         height: 1200,
         alt: "Mostafa Ahmed professional portrait",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: "مصطفى أحمد | مطور ويب وخبير تسويق رقمي",
     description:
       "مطور ويب متكامل (MERN Stack & Next.js) متخصص في بناء مواقع برمجية احترافية وسريعة.",
-    images: ["/images/mostafa-portrait.png"],
+    images: ["/images/mostafa-new.webp"],
   },
   icons: {
     icon: "/favicon.svg",

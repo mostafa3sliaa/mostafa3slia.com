@@ -20,7 +20,7 @@ export function AboutSection() {
           {aboutHighlights.map(({ icon: Icon }, index) => {
             const dictItem = dict.data.aboutHighlights[index];
             return (
-              <div key={index} className="glass-panel group flex flex-col p-6 sm:p-8 animate-fade-in-up" style={{ animationDelay: `${0.1 * index}s` }}>
+              <div key={index} className={`glass-panel group flex flex-col p-6 sm:p-8 animate-fade-in-up animation-delay-${Math.min(index * 100 + 100, 1000)}`}>
                 <span className="mb-8 flex size-14 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-[#00e5ff] transition-all duration-500 group-hover:-translate-y-2 group-hover:scale-110 group-hover:border-[#00e5ff]/50 group-hover:bg-[#00e5ff]/10 group-hover:shadow-[0_0_30px_rgba(0,229,255,0.3)]">
                   <Icon aria-hidden className="size-6 transition-transform duration-300 group-hover:scale-110" />
                 </span>

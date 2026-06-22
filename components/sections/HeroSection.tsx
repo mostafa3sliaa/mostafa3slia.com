@@ -15,7 +15,7 @@ export function HeroSection() {
         <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8">
           
           {/* Text content - Left Bento */}
-          <div className="glass-panel flex flex-col justify-center p-8 sm:p-12 lg:p-14 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+          <div className="glass-panel flex flex-col justify-center p-8 sm:p-12 lg:p-14 animate-fade-in-up animation-delay-100">
             <div className="mb-8 inline-flex w-fit items-center gap-2 rounded-full border border-[#00ff66]/30 bg-[#00ff66]/10 px-4 py-2 text-sm font-bold text-[#00ff66] uppercase tracking-wider shadow-[0_0_20px_rgba(0,255,102,0.15)]">
               <span className="relative flex size-2">
                 <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#00ff66] opacity-75" />
@@ -42,8 +42,8 @@ export function HeroSection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => {
-                  if (typeof window !== "undefined" && (window as any).gtag) {
-                    (window as any).gtag('event', 'conversion', {
+                  if (typeof window !== "undefined" && (window as Window & { gtag?: (...args: unknown[]) => void }).gtag) {
+                    (window as Window & { gtag?: (...args: unknown[]) => void }).gtag!('event', 'conversion', {
                       'send_to': 'AW-18257364372/Q1rICPH12sIcEJSL5YFE',
                       'value': 1.0,
                       'currency': 'EGP'
@@ -59,8 +59,8 @@ export function HeroSection() {
               <a
                 href="https://cal.com/mostafa-3slia"
                 onClick={() => {
-                  if (typeof window !== "undefined" && (window as any).gtag) {
-                    (window as any).gtag('event', 'conversion', {
+                  if (typeof window !== "undefined" && (window as Window & { gtag?: (...args: unknown[]) => void }).gtag) {
+                    (window as Window & { gtag?: (...args: unknown[]) => void }).gtag!('event', 'conversion', {
                       'send_to': 'AW-18257364372/Q1rICPH12sIcEJSL5YFE',
                       'value': 1.0,
                       'currency': 'EGP'
@@ -87,7 +87,7 @@ export function HeroSection() {
           </div>
 
           {/* Image - Right Bento */}
-          <div className="glass-panel relative min-h-[500px] overflow-hidden lg:min-h-[600px] animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <div className="glass-panel relative min-h-[500px] overflow-hidden lg:min-h-[600px] animate-fade-in-up animation-delay-200">
             <Image
               src="/images/mostafa-new.webp"
               alt="Mostafa Ahmed portrait"

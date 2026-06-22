@@ -6,7 +6,7 @@ import { stats } from "@/data/portfolio";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export function StatsSection() {
-  const { t, dict } = useLanguage();
+  const { dict } = useLanguage();
   return (
     <section className="py-20 sm:py-24">
       <div className="section-shell">

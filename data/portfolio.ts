@@ -13,7 +13,7 @@ import {
   FiTarget,
   FiTrendingUp,
 } from "react-icons/fi";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaFacebook, FaTwitter } from "react-icons/fa";
 import type {
   ContactMethod,
   NavItem,
@@ -35,7 +35,10 @@ export const navItems = [
 ];
 
 export const socialLinks: SocialLink[] = [
-  { label: "GitHub", href: "https://github.com/", icon: FiGithub },
+  { label: "LinkedIn", href: "https://linkedin.com/in/mostafa-ahmed", icon: FiLinkedin },
+  { label: "Facebook", href: "https://facebook.com/mostafa3sliaa/", icon: FaFacebook },
+  { label: "Twitter", href: "https://twitter.com/mostafa_ahmed", icon: FaTwitter },
+  { label: "GitHub", href: "https://github.com/mostafa3sliaa", icon: FiGithub },
 ];
 
 export const services: Service[] = [
@@ -90,7 +93,7 @@ export const projects: Project[] = [
     sourceUrl: "",
     accent: "blue",
     visual: "medical",
-    image: "/eyeretina.png",
+    image: "/eyeretina.webp",
   },
 
   {
@@ -102,7 +105,7 @@ export const projects: Project[] = [
     sourceUrl: "",
     accent: "blue",
     visual: "medical",
-    image: "/ra3aya.png",
+    image: "/ra3aya.webp",
   },
   {
     title: "Dr. Ahmed Fawzy Dental Clinic",
@@ -113,7 +116,7 @@ export const projects: Project[] = [
     sourceUrl: "",
     accent: "green",
     visual: "medical",
-    image: "/dr-fawzy.png",
+    image: "/dr-fawzy.webp",
   },
 
   {
@@ -125,7 +128,7 @@ export const projects: Project[] = [
     sourceUrl: "",
     accent: "green",
     visual: "realEstate",
-    image: "/real_estate.png",
+    image: "/real_estate.webp",
   },
   {
     title: "Fitness Tracker App",
@@ -136,7 +139,7 @@ export const projects: Project[] = [
     sourceUrl: "",
     accent: "blue",
     visual: "growth",
-    image: "/fitness_tracker.png",
+    image: "/fitness_tracker.webp",
   },
 ];
 

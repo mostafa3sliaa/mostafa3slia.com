@@ -37,9 +37,9 @@ export function ContactSection() {
                   href="https://cal.com/mostafa-3slia" 
                   icon={FiCalendar}
                   onClick={() => {
-                    if (typeof window !== "undefined" && (window as any).gtag) {
-                      (window as any).gtag('event', 'conversion', {
-                        'send_to': 'AW-18257364372/Q1rICPH12sIcEJSL5YFE',
+                    if (typeof window !== "undefined" && (window as Window & { gtag?: (...args: unknown[]) => void }).gtag) {
+                      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag!('event', 'conversion', {
+                        'send_to': 'AW-18257364372/wj5DCMKeisMcEJSL5YFE',
                         'value': 1.0,
                         'currency': 'EGP'
                       });
@@ -53,9 +53,9 @@ export function ContactSection() {
                   icon={FiSend} 
                   variant="secondary"
                   onClick={() => {
-                    if (typeof window !== "undefined" && (window as any).gtag) {
-                      (window as any).gtag('event', 'conversion', {
-                        'send_to': 'AW-18257364372/Q1rICPH12sIcEJSL5YFE',
+                    if (typeof window !== "undefined" && (window as Window & { gtag?: (...args: unknown[]) => void }).gtag) {
+                      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag!('event', 'conversion', {
+                        'send_to': 'AW-18257364372/wj5DCMKeisMcEJSL5YFE',
                         'value': 1.0,
                         'currency': 'EGP'
                       });
@@ -77,9 +77,9 @@ export function ContactSection() {
                     target={href.startsWith("http") ? "_blank" : undefined}
                     rel={href.startsWith("http") ? "noreferrer" : undefined}
                     onClick={() => {
-                      if (typeof window !== "undefined" && (window as any).gtag) {
-                        (window as any).gtag('event', 'conversion', {
-                          'send_to': 'AW-18257364372/Q1rICPH12sIcEJSL5YFE',
+                      if (typeof window !== "undefined" && (window as Window & { gtag?: (...args: unknown[]) => void }).gtag) {
+                        (window as Window & { gtag?: (...args: unknown[]) => void }).gtag!('event', 'conversion', {
+                          'send_to': 'AW-18257364372/wj5DCMKeisMcEJSL5YFE',
                           'value': 1.0,
                           'currency': 'EGP'
                         });

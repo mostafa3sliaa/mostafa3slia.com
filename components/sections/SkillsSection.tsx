@@ -17,7 +17,7 @@ export function SkillsSection() {
           description={t("skills.description2")}
         />
 
-        <div className="glass-panel overflow-hidden p-8 sm:p-12 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+        <div className="glass-panel overflow-hidden p-8 sm:p-12 animate-fade-in-up animation-delay-200">
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {skills.map((skill) => {
               const styles = accentStyles[skill.accent];
@@ -36,8 +36,15 @@ export function SkillsSection() {
                   
                   <div className="relative mt-6 h-2.5 overflow-hidden rounded-full bg-black/50 border border-white/5">
                     <span
-                      className={cn("block h-full rounded-full bg-gradient-to-r shadow-[0_0_10px_rgba(255,255,255,0.3)]", styles.from, styles.to)}
-                      style={{ width: `${skill.level}%` }}
+                      className={cn(
+                        "block h-full rounded-full bg-gradient-to-r shadow-[0_0_10px_rgba(255,255,255,0.3)]",
+                        styles.from,
+                        styles.to,
+                        skill.level === 95 ? "w-[95%]" :
+                        skill.level === 90 ? "w-[90%]" :
+                        skill.level === 85 ? "w-[85%]" :
+                        skill.level === 80 ? "w-[80%]" : "w-full"
+                      )}
                     />
                   </div>
                   

@@ -23,7 +23,7 @@ export function ServicesSection() {
             const styles = accentStyles[accent];
 
             return (
-              <div key={title} className="glass-panel group flex flex-col p-8 sm:p-10 animate-fade-in-up" style={{ animationDelay: `${0.1 * index}s` }}>
+              <div key={title} className={`glass-panel group flex flex-col p-8 sm:p-10 animate-fade-in-up animation-delay-${Math.min(index * 100 + 100, 1000)}`}>
                 <div
                   className={cn(
                     "mb-8 flex size-16 items-center justify-center rounded-2xl border transition-all duration-500 group-hover:-translate-y-2 group-hover:scale-110",

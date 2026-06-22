@@ -31,7 +31,7 @@ export function ProjectsSection() {
             );
 
             return (
-              <div key={title} className={bentoClasses} style={{ animationDelay: `${0.1 * index}s` }}>
+              <div key={title} className={`${bentoClasses} animation-delay-${Math.min(index * 100 + 100, 1000)}`}>
                 <div className={cn("relative overflow-hidden rounded-xl", "h-60")}>
                   <ProjectVisual visual={project.visual} accent={project.accent} image={project.image} />
                 </div>
