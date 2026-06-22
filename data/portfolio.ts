@@ -12,8 +12,11 @@ import {
   FiSearch,
   FiTarget,
   FiTrendingUp,
+  FiLayout,
+  FiDatabase,
 } from "react-icons/fi";
-import { FaWhatsapp, FaFacebook, FaTwitter } from "react-icons/fa";
+import { FaWhatsapp, FaFacebook, FaTwitter, FaReact, FaNodeJs, FaPhp, FaWordpress, FaGoogle, FaFigma, FaHtml5, FaCss3, FaLaravel } from "react-icons/fa";
+import { SiNextdotjs, SiTailwindcss, SiTypescript } from "react-icons/si";
 import type {
   ContactMethod,
   NavItem,
@@ -73,14 +76,17 @@ export const services: Service[] = [
 ];
 
 export const skills: Skill[] = [
-  { name: "React.js & Next.js", level: 95, accent: "blue" },
-  { name: "HTML, CSS, JS", level: 95, accent: "purple" },
-  { name: "Node.js", level: 85, accent: "green" },
-  { name: "PHP & Laravel", level: 85, accent: "purple" },
-  { name: "WordPress", level: 90, accent: "blue" },
-  { name: "SEO", level: 90, accent: "green" },
-  { name: "UI/UX Design", level: 80, accent: "purple" },
-  { name: "Google Ads", level: 85, accent: "blue" },
+  { name: "React.js", icon: FaReact, accent: "blue", category: "frontend" },
+  { name: "Next.js", icon: SiNextdotjs, accent: "purple", category: "frontend" },
+  { name: "Tailwind CSS", icon: SiTailwindcss, accent: "blue", category: "frontend" },
+  { name: "TypeScript", icon: SiTypescript, accent: "blue", category: "frontend" },
+  { name: "Node.js", icon: FaNodeJs, accent: "green", category: "backend" },
+  { name: "PHP & Laravel", icon: FaLaravel, accent: "purple", category: "backend" },
+  { name: "WordPress", icon: FaWordpress, accent: "blue", category: "backend" },
+  { name: "SEO Optimization", icon: FiSearch, accent: "green", category: "marketing" },
+  { name: "Google Ads", icon: FaGoogle, accent: "blue", category: "marketing" },
+  { name: "Digital Marketing", icon: FiTarget, accent: "purple", category: "marketing" },
+  { name: "UI/UX Design", icon: FaFigma, accent: "purple", category: "design" },
 ];
 
 export const projects: Project[] = [

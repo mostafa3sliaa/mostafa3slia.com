@@ -33,12 +33,18 @@
     "tag": "Conversion Focused"
   },
   "skills": {
-    "title": "Technical Skills",
+    "title": "My Technical Skills",
     "subtitle": "Technologies & Tools",
     "eyebrow": "Skills",
-    "title2": "Essential Technologies and Tools for Growth and Development.",
-    "description2": "The best technologies for building fast interfaces and robust SEO-friendly applications.",
-    "tag": "Production Ready"
+    "title2": "Essential Technologies & Tools for Growth.",
+    "description2": "The best tech stack for building fast interfaces and robust apps optimized for search engines.",
+    "tag": "Production Ready",
+    "categories": {
+      "frontend": "Frontend Development",
+      "backend": "Backend & CMS",
+      "marketing": "Digital Marketing",
+      "design": "UI/UX Design"
+    }
   },
   "projects": {
     "title": "Recent Work",

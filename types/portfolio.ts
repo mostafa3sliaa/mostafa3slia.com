@@ -22,8 +22,9 @@ export type Service = {
 
 export type Skill = {
   name: string;
-  level: number;
+  icon: IconType;
   accent: Accent;
+  category: "frontend" | "backend" | "marketing" | "design";
 };
 
 export type Project = {
